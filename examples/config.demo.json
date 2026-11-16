@@ -1,0 +1,78 @@
+{
+  "_说明": "空跑演示用配置，全部为编造的假数据。指向 examples 目录里的假数据文件。",
+  "project": {
+    "game_name": "{{GAME_NAME}}",
+    "game_code": "DEMO",
+    "game_genre": "{{GAME_GENRE}}",
+    "platform": "{{PLATFORM_NAME}}",
+    "channel": "{{CHANNEL_NAME}}",
+    "period": "2026-01-01 ~ 2026-03-31",
+    "focus_month": "2026-03",
+    "language": "zh-CN"
+  },
+  "source": {
+    "mode": "own_ledger",
+    "docid": "<DOCID-示例>",
+    "sheet": "<投放明细子表-示例>",
+    "bench_docid": "<大盘表DOCID-示例>",
+    "bench_sheet": "<大盘子表-示例>",
+    "tag_sheet": "<新建打标子表-示例>",
+    "readonly": true
+  },
+  "fields": {
+    "material_id": "素材ID",
+    "date": "投放日期",
+    "segment": "广告类型",
+    "position": "广告位置",
+    "title": "广告标题",
+    "desc": "广告描述",
+    "image_url": "图片链接",
+    "video_url": "视频链接",
+    "impressions": "曝光UV",
+    "clicks": "点击UV",
+    "game": "游戏名"
+  },
+  "taxonomy": {
+    "style": ["风格A_写实渲染", "风格B_概念原画", "风格C_平面插画", "风格D_UI展示", "风格E_实机截图"],
+    "elements": ["单角色立绘", "多角色拼条", "角色战斗", "BOSS怪物", "场景风景", "游戏内地图", "装备道具", "大字文案", "实机", "奖励物"],
+    "benefit": ["堆叠式", "独立圈圈式", "单品聚焦", "大字福利文案", "无福利"],
+    "segments": ["分层A_纯新", "分层B_包名包", "分层C_老用户", "分层D_兴趣标签"],
+    "confidence": ["高", "中", "低"],
+    "element_max": 3,
+    "element_separator": "+"
+  },
+  "nodes": {
+    "keywords": { "节点A_周年庆": ["周年", "庆典"] },
+    "ranges": {
+      "节点C_档期一": ["2026-01-10", "2026-01-20"],
+      "节点D_档期二": ["2026-03-05", "2026-03-15"]
+    },
+    "default": "日常"
+  },
+  "benchmark": {
+    "target": "{{GAME_NAME}}",
+    "aliases": ["{{GAME_NAME}}", "{{GAME_ALIAS}}", "{{GAME_LEGACY_NAME}}"],
+    "peers": ["{{BENCHMARK_GAME_A}}", "{{BENCHMARK_GAME_B}}"],
+    "months": ["2026-01", "2026-02", "2026-03"],
+    "game_min_impressions": 100000,
+    "material_min_impressions": 10000
+  },
+  "thresholds": {
+    "min_sample": 3,
+    "top_material_min_impressions": 50000,
+    "reuse_bands": [1, 2, 3, 4]
+  },
+  "output": {
+    "data_dir": "./examples/out",
+    "image_dir": "./examples/out/素材图",
+    "cdn_base": "https://cdn.example.com",
+    "referer": "https://example.com/",
+    "link_policy": "cdn_only"
+  },
+  "report": {
+    "narrative": "neutral",
+    "show_rank": true,
+    "show_head_game_names": false,
+    "peer_compare_requires_impressions": true
+  }
+}

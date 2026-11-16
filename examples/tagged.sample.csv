@@ -1,0 +1,15 @@
+﻿material_id,date,segment,position,node,style,elements,benefit,desc_visual,confidence,impressions,clicks,image_url
+DEMO_M001,2026-01-12,分层A_纯新,位置A,节点C_档期一,风格B_概念原画,场景风景+大字文案,无福利,示例：远景场景 + 标题大字,高,120000,720,https://cdn.example.com/img/DEMO_001.jpg
+DEMO_M002,2026-01-12,分层B_包名包,位置B,节点A_周年庆,风格A_写实渲染,角色战斗+奖励物+大字文案,堆叠式,示例：战斗角色 + 底部堆叠奖励,高,260000,2860,https://cdn.example.com/img/DEMO_002.jpg
+DEMO_M003,2026-01-18,分层C_老用户,位置A,节点C_档期一,风格A_写实渲染,单角色立绘,无福利,示例：单角色立绘,高,98000,980,https://cdn.example.com/img/DEMO_003.jpg
+DEMO_M001,2026-01-20,分层D_兴趣标签,位置B,节点C_档期一,风格B_概念原画,场景风景+大字文案,无福利,示例：远景场景 + 标题大字,高,88000,528,https://cdn.example.com/img/DEMO_001.jpg
+DEMO_M004,2026-02-02,分层A_纯新,位置A,日常,风格C_平面插画,多角色拼条+大字文案,大字福利文案,示例：多角色拼条 + 福利文字,中,150000,1050,https://cdn.example.com/img/DEMO_004.jpg
+DEMO_M002,2026-02-08,分层B_包名包,位置A,日常,风格A_写实渲染,角色战斗+奖励物+大字文案,堆叠式,示例：战斗角色 + 底部堆叠奖励,高,180000,1620,https://cdn.example.com/img/DEMO_002.jpg
+DEMO_M005,2026-02-14,分层C_老用户,位置B,日常,风格D_UI展示,装备道具+游戏内地图,单品聚焦,示例：装备卡片特写,高,210000,3360,https://cdn.example.com/img/DEMO_005.jpg
+DEMO_M006,2026-02-20,分层D_兴趣标签,位置A,日常,风格B_概念原画,场景风景,无福利,示例：纯场景,高,76000,380,https://cdn.example.com/img/DEMO_006.jpg
+DEMO_M003,2026-03-06,分层A_纯新,位置B,节点D_档期二,风格A_写实渲染,单角色立绘,无福利,示例：单角色立绘,高,132000,1452,https://cdn.example.com/img/DEMO_003.jpg
+DEMO_M007,2026-03-08,分层B_包名包,位置A,节点D_档期二,风格A_写实渲染,单角色立绘+奖励物,独立圈圈式,示例：角色 + 横向奖励卡,中,300000,4800,https://cdn.example.com/img/DEMO_007.jpg
+DEMO_M005,2026-03-12,分层C_老用户,位置B,节点D_档期二,风格D_UI展示,装备道具+游戏内地图,单品聚焦,示例：装备卡片特写,高,240000,4320,https://cdn.example.com/img/DEMO_005.jpg
+DEMO_M007,2026-03-16,分层C_老用户,位置A,节点D_档期二,风格A_写实渲染,单角色立绘+奖励物,独立圈圈式,示例：角色 + 横向奖励卡,中,280000,3920,https://cdn.example.com/img/DEMO_007.jpg
+DEMO_M008,2026-03-22,分层A_纯新,位置A,日常,风格E_实机截图,实机+角色战斗,无福利,示例：带 UI 的实机战斗画面,高,64000,320,https://cdn.example.com/img/DEMO_008.jpg
+DEMO_M001,2026-03-25,分层B_包名包,位置B,日常,风格B_概念原画,场景风景+大字文案,无福利,示例：远景场景 + 标题大字,高,110000,660,https://cdn.example.com/img/DEMO_001.jpg

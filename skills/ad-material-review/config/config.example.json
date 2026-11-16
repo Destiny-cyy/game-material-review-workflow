@@ -1,0 +1,103 @@
+{
+  "_说明": "通用配置文件（示例，全部为占位/假数据）。游戏与平台专属信息只写在这一份文件里；换一款游戏、换一个投放平台，只改这里，脚本和文档都不用动。复制本文件为 config.json 后填写真实值即可。",
+
+  "project": {
+    "game_name": "{{GAME_NAME}}",
+    "game_code": "DEMO",
+    "game_genre": "{{GAME_GENRE}}",
+    "platform": "{{PLATFORM_NAME}}",
+    "channel": "{{CHANNEL_NAME}}",
+    "period": "YYYY-MM-DD ~ YYYY-MM-DD",
+    "focus_month": "YYYY-MM",
+    "language": "zh-CN"
+  },
+
+  "source": {
+    "_说明": "mode 两种取数方式：own_ledger=自有投放台账（含人群分层/广告位字段）；market_table=平台大盘表（按游戏名过滤目标游戏，通常无分层字段）。",
+    "mode": "own_ledger",
+    "docid": "<DOCID>",
+    "sheet": "<投放明细子表名>",
+    "bench_docid": "<大盘表DOCID>",
+    "bench_sheet": "<大盘子表名>",
+    "tag_sheet": "<新建打标子表名>",
+    "readonly": true,
+    "_readonly说明": "原表一律只读，禁止写入；打标结果写进新建子表 tag_sheet。"
+  },
+
+  "fields": {
+    "_说明": "源文件真实列名 → 工作流内部统一列名。字段名不一样时只改这里。",
+    "material_id": "素材ID",
+    "date": "投放日期",
+    "segment": "广告类型",
+    "position": "广告位置",
+    "title": "广告标题",
+    "desc": "广告描述",
+    "image_url": "图片链接",
+    "video_url": "视频链接",
+    "impressions": "曝光UV",
+    "clicks": "点击UV",
+    "game": "游戏名"
+  },
+
+  "taxonomy": {
+    "_说明": "视觉标签体系。示例值是抽象占位，请按目标游戏实际画风替换；也可直接套用 presets/ 里的示例预设。",
+    "style": ["风格A_写实渲染", "风格B_概念原画", "风格C_平面插画", "风格D_UI展示", "风格E_实机截图"],
+    "elements": ["单角色立绘", "多角色拼条", "角色战斗", "BOSS怪物", "场景风景", "游戏内地图", "装备道具", "大字文案", "实机", "奖励物"],
+    "benefit": ["堆叠式", "独立圈圈式", "单品聚焦", "大字福利文案", "无福利"],
+    "segments": ["分层A_纯新", "分层B_包名包", "分层C_老用户", "分层D_兴趣标签"],
+    "confidence": ["高", "中", "低"],
+    "element_max": 3,
+    "element_separator": "+",
+    "_element说明": "画面元素为多选，最多 element_max 个；写入表格时用 element_separator 分隔。"
+  },
+
+  "nodes": {
+    "_说明": "运营节点（版本档期）判定规则。关键词命中优先，其次日期区间，都不命中用 default。日期为示例，执行前须向业务确认。",
+    "keywords": {
+      "节点A_周年庆": ["周年", "庆典"],
+      "节点B_大版本": ["新版本", "上线"]
+    },
+    "ranges": {
+      "节点C_档期一": ["YYYY-MM-DD", "YYYY-MM-DD"],
+      "节点D_档期二": ["YYYY-MM-DD", "YYYY-MM-DD"]
+    },
+    "default": "日常"
+  },
+
+  "benchmark": {
+    "_说明": "大盘对比配置。aliases 用来合并同一游戏的不同名字（游戏名变体不合并会算出假结果）。",
+    "target": "{{GAME_NAME}}",
+    "aliases": ["{{GAME_NAME}}", "{{GAME_ALIAS}}", "{{GAME_LEGACY_NAME}}"],
+    "peers": ["{{BENCHMARK_GAME_A}}", "{{BENCHMARK_GAME_B}}"],
+    "months": ["YYYY-MM", "YYYY-MM", "YYYY-MM"],
+    "game_min_impressions": 5000000,
+    "material_min_impressions": 100000,
+    "_门槛说明": "游戏级排名按月曝光≥game_min_impressions 纳入；素材级按单条曝光≥material_min_impressions 纳入，避免小样本刷榜。"
+  },
+
+  "thresholds": {
+    "min_sample": 20,
+    "top_material_min_impressions": 500000,
+    "reuse_bands": [1, 2, 3, 4],
+    "_说明": "样本量低于 min_sample 的组只给方向性结论并标注「样本不足」。"
+  },
+
+  "output": {
+    "data_dir": "./data",
+    "image_dir": "./data/素材图",
+    "cdn_base": "https://cdn.example.com",
+    "referer": "https://example.com/",
+    "link_policy": "cdn_only",
+    "_link_policy说明": "对外/可分享产物只放 cdn_only 网址，禁止出现本地路径与内网链接。cdn_base 仅为示例域名，换成你们平台的图片域名。"
+  },
+
+  "report": {
+    "_说明": "报告叙事策略。不同业务方要求不同，用开关控制，不写死在方法论里。",
+    "narrative": "neutral",
+    "_narrative可选值": "neutral=客观全量展示；positive_only=只展示优势与环比进步，排名/分位/垫底不进报告；full=全量含排名。",
+    "show_rank": false,
+    "show_head_game_names": false,
+    "peer_compare_requires_impressions": true,
+    "_说明2": "peer_compare_requires_impressions=true 表示任何对标游戏对比都必须同时给出曝光量，只给点击率不给分母视为误导。"
+  }
+}

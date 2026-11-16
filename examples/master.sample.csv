@@ -1,0 +1,15 @@
+﻿rowid,material_id,date,segment,position,title,desc,image_url,video_url,impressions,clicks
+1,DEMO_M001,2026-01-12,分层A_纯新,位置A,示例标题-版本前瞻,示例描述文字,https://cdn.example.com/img/DEMO_001.jpg,,120000,720
+2,DEMO_M002,2026-01-12,分层B_包名包,位置B,示例标题-周年庆送好礼,示例描述文字,https://cdn.example.com/img/DEMO_002.jpg,,260000,2860
+3,DEMO_M003,2026-01-18,分层C_老用户,位置A,示例标题-角色展示,示例描述文字,https://cdn.example.com/img/DEMO_003.jpg,,98000,980
+4,DEMO_M001,2026-01-20,分层D_兴趣标签,位置B,示例标题-版本前瞻,示例描述文字,https://cdn.example.com/img/DEMO_001.jpg,,88000,528
+5,DEMO_M004,2026-02-02,分层A_纯新,位置A,示例标题-新版本上线,示例描述文字,https://cdn.example.com/img/DEMO_004.jpg,,150000,1050
+6,DEMO_M002,2026-02-08,分层B_包名包,位置A,示例标题-周年庆送好礼,示例描述文字,https://cdn.example.com/img/DEMO_002.jpg,,180000,1620
+7,DEMO_M005,2026-02-14,分层C_老用户,位置B,示例标题-装备特写,示例描述文字,https://cdn.example.com/img/DEMO_005.jpg,,210000,3360
+8,DEMO_M006,2026-02-20,分层D_兴趣标签,位置A,示例标题-场景风景,示例描述文字,https://cdn.example.com/img/DEMO_006.jpg,,76000,380
+9,DEMO_M003,2026-03-06,分层A_纯新,位置B,示例标题-角色展示,示例描述文字,https://cdn.example.com/img/DEMO_003.jpg,,132000,1452
+10,DEMO_M007,2026-03-08,分层B_包名包,位置A,示例标题-档期限定福利,示例描述文字,https://cdn.example.com/img/DEMO_007.jpg,,300000,4800
+11,DEMO_M005,2026-03-12,分层C_老用户,位置B,示例标题-装备特写,示例描述文字,https://cdn.example.com/img/DEMO_005.jpg,,240000,4320
+12,DEMO_M007,2026-03-16,分层C_老用户,位置A,示例标题-档期限定福利,示例描述文字,https://cdn.example.com/img/DEMO_007.jpg,,280000,3920
+13,DEMO_M008,2026-03-22,分层A_纯新,位置A,示例标题-实机演示,示例描述文字,https://cdn.example.com/img/DEMO_008.jpg,,64000,320
+14,DEMO_M001,2026-03-25,分层B_包名包,位置B,示例标题-版本前瞻,示例描述文字,https://cdn.example.com/img/DEMO_001.jpg,,110000,660

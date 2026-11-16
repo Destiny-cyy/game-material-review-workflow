@@ -1,0 +1,19 @@
+{
+  "_说明": "示例（编造）：大盘单条素材明细，用于演示 benchmark.py 的素材级中位口径。imp/clk 均为假数据。",
+  "rows": [
+    {"g": "{{GAME_NAME}}", "imp": 120000, "clk": 720},
+    {"g": "{{GAME_ALIAS}}", "imp": 60000, "clk": 300},
+    {"g": "{{GAME_NAME}}", "imp": 300000, "clk": 4800},
+    {"g": "{{GAME_NAME}}", "imp": 260000, "clk": 2860},
+    {"g": "{{GAME_NAME}}", "imp": 98000, "clk": 980},
+    {"g": "{{BENCHMARK_GAME_A}}", "imp": 200000, "clk": 1400},
+    {"g": "{{BENCHMARK_GAME_A}}", "imp": 180000, "clk": 1620},
+    {"g": "{{BENCHMARK_GAME_A}}", "imp": 150000, "clk": 1050},
+    {"g": "{{BENCHMARK_GAME_B}}", "imp": 210000, "clk": 1050},
+    {"g": "{{BENCHMARK_GAME_B}}", "imp": 130000, "clk": 780},
+    {"g": "其他游戏甲", "imp": 400000, "clk": 2000},
+    {"g": "其他游戏甲", "imp": 350000, "clk": 2450},
+    {"g": "其他游戏乙", "imp": 160000, "clk": 640},
+    {"g": "其他游戏乙", "imp": 90000, "clk": 360}
+  ]
+}

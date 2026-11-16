@@ -1,0 +1,24 @@
+# ── 真实配置：含在线表格 docid / 内网地址 / 真实列名，禁止提交 ──
+# 只放行 *.example.json / config.demo.json 这类示例配置
+skills/*/config/config.json
+skills/*/config/spec.json
+
+# ── 运行时数据与产物（可能含真实投放数据与真实素材图）──
+**/data/
+**/素材图/
+examples/out/
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# ── 系统 / 编辑器 ──
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ── 本机临时文件 ──
+*.tmp
+*.log

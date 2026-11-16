@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{GAME_NAME}} 素材复盘场景报告</title>
+  <style>
+    :root{--ink:#18201d;--muted:#66716b;--line:#dce3df;--paper:#f5f7f5;--green:#28785d;--blue:#3e6fa8;--amber:#d59832;--coral:#cf6555}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.55 "Microsoft YaHei",Arial,sans-serif;letter-spacing:0}
+    main{width:min(1240px,calc(100% - 40px));margin:24px auto 48px}.top{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;border-bottom:2px solid var(--ink);padding:8px 0 18px}
+    h1{margin:0;font-size:30px;font-weight:760}.sub{margin:6px 0 0;color:var(--muted)}.tag{border:1px solid var(--amber);color:#765116;background:#fff8e9;padding:6px 10px;border-radius:4px;font-weight:700;white-space:nowrap}
+    .notice{margin:14px 0 18px;padding:10px 12px;border-left:4px solid var(--amber);background:#fff;color:#5c5140}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.kpi,.panel{background:#fff;border:1px solid var(--line);border-radius:6px}
+    .kpi{padding:15px}.kpi b{display:block;font-size:25px}.kpi span{color:var(--muted)}.grid{display:grid;grid-template-columns:1.25fr .75fr;gap:14px;margin-top:14px}.panel{padding:18px}h2{font-size:17px;margin:0 0 14px}h3{font-size:14px;margin:16px 0 8px}
+    .bars{display:grid;gap:12px}.bar-row{display:grid;grid-template-columns:110px 1fr 58px;align-items:center;gap:10px}.track{height:12px;background:#edf1ee}.fill{height:100%;background:var(--green)}.bar-row:nth-child(2) .fill{background:var(--blue)}.bar-row:nth-child(3) .fill{background:var(--amber)}.bar-row:nth-child(4) .fill{background:var(--coral)}
+    table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:600;background:#f8faf8}.up{color:var(--green);font-weight:700}.down{color:var(--coral);font-weight:700}
+    .queue{display:grid;gap:9px}.item{display:grid;grid-template-columns:42px 1fr auto;gap:10px;align-items:start;border-top:1px solid var(--line);padding-top:10px}.p{font-weight:800;color:var(--coral)}.owner{color:var(--muted);font-size:12px}.foot{margin-top:14px;color:var(--muted);font-size:12px}
+    @media(max-width:800px){.kpis,.grid{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body><main>
+  <header class="top"><div><h1>{{GAME_NAME}} 素材复盘报告</h1><p class="sub">{{PLATFORM_NAME}} · {{CAMPAIGN_WINDOW}} · 配置驱动场景模板</p></div><div class="tag">演示数据，不代表真实项目</div></header>
+  <div class="notice">本页用于展示报告结构。游戏、平台、时间窗、标签和阈值应从配置文件读取；所有指标均为合成值。</div>
+  <section class="kpis">
+    <div class="kpi"><span>纳入素材</span><b>48</b><small>去重后 36 个创意</small></div>
+    <div class="kpi"><span>加权 CTR</span><b>1.84%</b><small class="up">较场景基线 +0.26pp</small></div>
+    <div class="kpi"><span>标签覆盖率</span><b>96%</b><small>2 条待人工复核</small></div>
+    <div class="kpi"><span>复用衰减</span><b>-18%</b><small>第 4 次投放后</small></div>
+  </section>
+  <section class="grid">
+    <article class="panel"><h2>创意方向表现</h2><div class="bars">
+      <div class="bar-row"><span>玩法实录</span><div class="track"><div class="fill" style="width:88%"></div></div><b>2.18%</b></div>
+      <div class="bar-row"><span>角色叙事</span><div class="track"><div class="fill" style="width:73%"></div></div><b>1.81%</b></div>
+      <div class="bar-row"><span>福利信息</span><div class="track"><div class="fill" style="width:62%"></div></div><b>1.54%</b></div>
+      <div class="bar-row"><span>纯品牌露出</span><div class="track"><div class="fill" style="width:46%"></div></div><b>1.13%</b></div>
+    </div><h3>人群 × 标签交叉</h3><table><thead><tr><th>人群</th><th>优先方向</th><th>样本</th><th>相对基线</th></tr></thead><tbody>
+      <tr><td>分层 A</td><td>玩法实录 + 清晰目标</td><td>12</td><td class="up">+0.31pp</td></tr><tr><td>分层 B</td><td>角色叙事 + 关系钩子</td><td>10</td><td class="up">+0.22pp</td></tr><tr><td>分层 C</td><td>福利信息 + 时限提示</td><td>8</td><td class="down">-0.04pp</td></tr>
+    </tbody></table></article>
+    <aside class="panel"><h2>下一轮动作</h2><div class="queue">
+      <div class="item"><span class="p">P0</span><div><b>补齐玩法实录方向</b><div>先扩 6 个构图变体，保留同一卖点口径。</div></div><span class="owner">素材组</span></div>
+      <div class="item"><span class="p">P1</span><div><b>控制高频素材复用</b><div>第 4 次投放前进入换图队列。</div></div><span class="owner">投放组</span></div>
+      <div class="item"><span class="p">P1</span><div><b>复核低样本标签</b><div>样本不足 3 条的方向不做排名结论。</div></div><span class="owner">分析组</span></div>
+    </div><p class="foot">行动项仅作模板示例，正式结论须复核样本量、口径和素材原图。</p></aside>
+  </section>
+</main></body></html>
